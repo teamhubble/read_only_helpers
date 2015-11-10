@@ -6,9 +6,11 @@ Read only helpers provides error managing for Rails 4 Models when we want to fla
 
 Sample rails model with resources
 
+```
 class MovementsJsonFr < ActiveRecord::Base
   include ReadOnlyHelpers
 end
+```
 
 ## Contributing to Read Only Helpers
 
