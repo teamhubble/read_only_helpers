@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    read_only_helpers (0.0.1)
+    read_only_helpers (0.0.2)
       activerecord
 
 GEM
