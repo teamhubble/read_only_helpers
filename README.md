@@ -12,6 +12,34 @@ class MovementsJsonFr < ActiveRecord::Base
 end
 ```
 
+## Using RSpec Matchers
+
+Read only helpers provides 2 rspec matchers to easily test that a Active Record model is really read only.
+
+1. Setting up RSpec
+```
+spec_helper.rb
+RSpec.configure do |config|
+  config.include(ReadOnlyHelpers::Matchers)
+end
+```
+
+2. Using in a Rspec test
+
+Testing the class instance 
+```
+it 'should give true on read only instance of class' do
+  expect(ReadOnlyClass).to be_read_only_instance
+end
+```
+Testing the class methods
+```
+it 'should give true on read only on object' do
+  item = ReadOnlyClass.new
+  expect(item).to be_read_only_class
+end
+```
+
 ## Contributing to Read Only Helpers
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
