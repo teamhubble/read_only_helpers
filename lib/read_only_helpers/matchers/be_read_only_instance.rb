@@ -1,4 +1,3 @@
-require 'pry'
 require 'active_record'
 module ReadOnlyHelpers
   module Matchers
