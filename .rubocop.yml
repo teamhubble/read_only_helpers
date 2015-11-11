@@ -1,6 +1,6 @@
 AllCops:
-  Includes:
-    - Rakefile
+  Exclude:
+    - read_only_helpers.gemspec
 Documentation:
   Enabled: false
 # Renaming `has_something?` to `something?` obfuscates whether it is a "is-a" or
@@ -10,4 +10,4 @@ Style/PredicateName:
 MethodLength:
   Max: 50
 Metrics/LineLength:
-  Max: 100
+  Max: 150

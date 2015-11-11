@@ -19,15 +19,13 @@ module ReadOnlyHelpers
       end
 
       def fail_test(method)
-        begin
-          @class_ref.send(method)
-          return false
-        rescue ActiveRecord::ReadOnlyRecord
-          return true
-        rescue => exception
-          @error = exception
-          return false
-        end
+        @class_ref.send(method)
+        return false
+      rescue ActiveRecord::ReadOnlyRecord
+        return true
+      rescue => exception
+        @error = exception
+        return false
       end
 
       def failure_message

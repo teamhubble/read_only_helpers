@@ -15,10 +15,9 @@ describe ReadOnlyHelpers::Matchers::BeReadOnlyInstance do
   end
 
   describe 'base checks' do
-
-    let (:read_only_item) { ReadOnlyClass.new }
-    let (:partial_ar_item) { PartialARClass.new }
-    let (:non_ar_item) { NonARClass.new }
+    let(:read_only_item) { ReadOnlyClass.new }
+    let(:partial_ar_item) { PartialARClass.new }
+    let(:non_ar_item) { NonARClass.new }
 
     it 'should give true on read only class' do
       expect(read_only_item).to be_read_only_class
