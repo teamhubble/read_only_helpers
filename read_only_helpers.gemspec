@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
 
   s.files        = Dir.glob('{bin,lib}/**/*') + %w(LICENSE README.md)
   s.require_path = 'lib'
-  s.add_development_dependency 'rdoc', '~> 3.12'
+  s.add_development_dependency 'rdoc', '~> 6.3'
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rubocop'
